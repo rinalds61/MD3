@@ -71,6 +71,10 @@ jobs:
         - name: Testa izpilde sakusies
           working-directory: ./js-api
           run: sudo npm run greetings greetings_dev
+        - name: Upload artifact
+        - uses: actions/upload-artifact@v4.3.2
+        name: test-report
+        path: js-api/mochawesome-report
 
   deploy-to-staging:
     name: Deploy-to-staging
