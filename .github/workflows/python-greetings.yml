@@ -63,7 +63,7 @@ jobs:
             repository: 'mtararujs/course-js-api-framework'
             path: js-api
         - name: npm install
-          run: npm install
+          run: npm install js-api/package.json
         - name: Testa izpilde sakusies
           run: npm run js-api/greetings greetings_dev
 
