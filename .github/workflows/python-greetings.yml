@@ -69,6 +69,7 @@ jobs:
           working-directory: ./js-api
           run: npm install 
         - name: hz
+          working-directory: ./js-api
           run: npm i --package-lock-only
         - name: fix npm
           run: npm audit fix
