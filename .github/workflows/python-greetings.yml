@@ -62,6 +62,10 @@ jobs:
           with: 
             repository: 'mtararujs/course-js-api-framework'
             path: js-api
+        - name: npm install
+          run: npm install
+        - name: Testa izpilde sakusies
+          run: npm run js-api/greetings greetings_dev
 
   deploy-to-staging:
     name: Deploy-to-staging
