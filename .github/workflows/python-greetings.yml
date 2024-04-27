@@ -10,12 +10,87 @@ on:
   workflow_dispatch:
 
 jobs: 
-  build:
-    name: Build
+  install-pip-deps:
+    name: Install pip deps
     runs-on: self-hosted
 
     steps:
-      #- uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Message about starting
+        run: echo Pip and deps installing has started
+        #- uses: actions/checkout@v4
+        #  with:
+        #    repository: 'mtararujs/python-greetings'
+        #    path: 'py-gre'
+        #- name: Install dependecies
+        #  run: pip install -r py-gre/requirements.txt
 
-      - name: Run a one-line script
-        run: echo Build success
+
+    # deploy-to-dev:
+    #     name: Deploy-to-DEV
+    #     runs-on: self-hosted
+    #     needs: [install-pip-deps]  
+    #     steps:
+    #         - uses: actions/checkout@v4
+    #         - name: Message about starting
+    #           run: echo deploy-to-dev has started
+
+
+
+    # tests-on-dev:
+    #     name: Tests-on-DEV
+    #     runs-on: self-hosted
+    #     needs: [deploy-to-dev]  
+    #     steps:
+    #         - uses: actions/checkout@v4
+    #         - name: Message about starting
+    #           run: echo tests-on-dev has started
+
+    # deploy-to-staging:
+    #     name: Deploy-to-staging
+    #     runs-on: self-hosted
+    #     needs: [tests-on-dev]  
+    #     steps:
+    #         - name: Message about starting
+    #           run: echo Deploy-to-staging has started
+
+    # tests-on-staging:
+    #     name: Tests-on-staging
+    #     runs-on: self-hosted
+    #     needs: [deploy-to-staging]  
+    #     steps:      
+    #     - name: Message about starting
+    #       run: echo Tests-on-staging has started
+
+    # deploy-to-preprod:
+    #     name: Deploy-to-preprod
+    #     runs-on: self-hosted
+    #     needs: [tests-on-staging]  
+    #     steps:      
+    #     - name: Message about starting
+    #       run: echo Deploy-to-preprod has started
+
+
+    # tests-on-preprod:
+    #     name: Tests-on-preprod
+    #     runs-on: self-hosted
+    #     needs: [deploy-to-preprod]  
+    #     steps:
+    #         - name: Message about starting
+    #           run: echo Tests-on-preprod has started
+
+    # deploy-to-prod:
+    #     name: deploy-to-prod
+    #     runs-on: self-hosted
+    #     needs: [tests-on-preprod]  
+    #     steps:
+    #         - name: Message about starting
+    #           run: echo deploy-to-prod has started
+
+    # test-on-prod:
+    #     name: test-on-prod
+    #     runs-on: self-hosted
+    #     needs: [deploy-to-prod]  
+    #     steps:
+    #         - name: Message about starting
+    #           run: echo test-on-prod has started
