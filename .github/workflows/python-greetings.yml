@@ -70,7 +70,7 @@ jobs:
           run: npm install 
         - name: Testa izpilde sakusies
           working-directory: ./js-api
-          run: npm run greetings greetings_dev
+          run: sudo npm run greetings greetings_dev
 
   deploy-to-staging:
     name: Deploy-to-staging
