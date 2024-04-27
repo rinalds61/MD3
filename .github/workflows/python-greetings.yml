@@ -65,6 +65,7 @@ jobs:
         - name: npm install
           run: npm install js-api
         - name: Testa izpilde sakusies
+          working-directory: ./js-api
           run: npm run greetings greetings_dev
 
   deploy-to-staging:
