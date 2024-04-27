@@ -69,7 +69,7 @@ jobs:
           working-directory: ./js-api
           run: npm install 
         - name: fix npm
-          run: npm audit fix --force
+          run: npm audit fix
         - name: Upload test reports
           uses: actions/upload-artifact@v2
           with:
