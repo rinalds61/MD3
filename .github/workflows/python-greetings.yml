@@ -23,8 +23,8 @@ jobs:
         with:
           repository: 'mtararujs/python-greetings'
           path: 'py-gre'
-      # - name: Install dependecies
-      #   run: pip install -r py-gre/requirements.txt
+      - name: Install dependecies
+        run: pip install -r py-gre/requirements.txt
 
 
   deploy-to-dev:
