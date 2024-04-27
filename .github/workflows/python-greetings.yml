@@ -25,6 +25,8 @@ jobs:
           path: 'py-gre'
       - name: Install dependecies
         run: pip install -r py-gre/requirements.txt
+      - name: install pm2
+        run: npm install pm2 -g
 
 
   deploy-to-dev:
