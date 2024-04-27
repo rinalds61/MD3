@@ -68,6 +68,8 @@ jobs:
         - name: npm install
           working-directory: ./js-api
           run: npm install 
+        - name: ip
+          run: ifconfig
         - name: Testa izpilde sakusies
           working-directory: ./js-api
           run: sudo npm run greetings greetings_dev
